@@ -3598,10 +3598,30 @@ button.b-formalize__btn_byTel{
     border-radius: 3px;
     padding: 5px 5px 25px 5px;
 }
+.b-articles_item aside{
+    border-radius: 3px;
+    overflow: hidden;
+}
 .b-articles_item img{
     display: block;
+    margin: 0 auto;
     width: 100%;
     border-radius: 3px;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transition: -webkit-transform 200ms;
+    -o-transition: -o-transform 200ms;
+    transition: transform 200ms;
+}
+.b-articles_item img:hover{
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 .b-articles_item h5{
     margin: 10px 0;
@@ -3624,6 +3644,14 @@ button.b-formalize__btn_byTel{
     font-weight: 400;
 }
 .b-articles_item a{
+    margin: 0;
+    color: #b3b3b1;
+    cursor: pointer;
+    -webkit-transition: color 200ms;
+    -o-transition: color 200ms;
+    transition: color 200ms;
+}
+.b-readmore{
     position: absolute;
     bottom: 5px;
     left: 0;
@@ -3634,9 +3662,9 @@ button.b-formalize__btn_byTel{
     font-size: 10px;
     line-height: 10px;
     color: #b3b3b1;
-    cursor: pointer;
+    
 }
-.b-articles_item a:hover{
+.b-articles_item:hover .b-readmore{
     color: #b2cf4c;
 }
 .section--contacts{
