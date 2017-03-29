@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-.b-banners:after, .b-banners:before, .b-lang:after, .b-lang:before, .b-nav__list:after, .b-nav__list:before, .b-partners__list:after, .b-partners__list:before, .b-social-lang:after, .b-social-lang:before, .b-social:after, .b-social:before, .b-workflow:after, .b-workflow:before, .section--slider:after, .section--slider:before {
+.b-bananers:after, .b-bananers:before, .b-lang:after, .b-lang:before, .b-nav__list:after, .b-nav__list:before, .b-partners__list:after, .b-partners__list:before, .b-social-lang:after, .b-social-lang:before, .b-social:after, .b-social:before, .b-workflow:after, .b-workflow:before, .section--slider:after, .section--slider:before {
 	content: " ";
 	display: table
 }
-.b-banners:after, .b-lang:after, .b-nav__list:after, .b-partners__list:after, .b-social-lang:after, .b-social:after, .b-workflow:after, .section--slider:after {
+.b-bananers:after, .b-lang:after, .b-nav__list:after, .b-partners__list:after, .b-social-lang:after, .b-social:after, .b-workflow:after, .section--slider:after {
 	clear: both
 }
 .b-location__list, .b-menu__list, .b-mobile-nav__list, .b-nav__list, .b-partners__list, .b-phones__list {
@@ -1678,21 +1678,21 @@ img {
 		margin: 0 auto 30px
 	}
 }
-.b-banners {
+.b-bananers {
 	position: relative;
 	margin-left: -10px;
 	line-height: 0;
 	text-align: center;
 	z-index: 2
 }
-.b-banner {
+.b-bananer {
 	display: inline-block;
 	padding-left: 10px;
 	margin-bottom: 10px;
 	margin-right: -.24em;
 	text-align: left
 }
-.b-banner__link {
+.b-bananer__link {
 	position: relative;
 	display: block;
 	width: 316px;
@@ -1700,23 +1700,23 @@ img {
 	overflow: hidden
 }
 @media screen and (min-width:320px) {
-	.b-banner__link {
+	.b-bananer__link {
 		width: 100%
 	}
 }
 @media screen and (min-width:768px) {
-	.b-banner__link {
+	.b-bananer__link {
 		width: 316px
 	}
 }
-.b-banner__link img {
+.b-bananer__link img {
 	display: block;
 	-webkit-transition: -webkit-transform .25s linear;
 	transition: -webkit-transform .25s linear;
 	transition: transform .25s linear;
 	transition: transform .25s linear, -webkit-transform .25s linear
 }
-.b-banner__link:after {
+.b-bananer__link:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -1726,26 +1726,26 @@ img {
 	-webkit-transition: all .25s linear;
 	transition: all .25s linear
 }
-.b-banner__link:hover img {
+.b-bananer__link:hover img {
 	-webkit-transform: scale3d(1.1, 1.1, 1.1);
 	transform: scale3d(1.1, 1.1, 1.1)
 }
-.b-banner__link.is--orange:hover:after {
+.b-bananer__link.is--orange:hover:after {
 	background-color: rgba(239, 159, 42, .2)
 }
-.b-banner__link.is--green:hover:after {
+.b-bananer__link.is--green:hover:after {
 	background-color: rgba(113, 157, 68, .2)
 }
-.b-banner__link.is--navy:hover:after {
+.b-bananer__link.is--navy:hover:after {
 	background-color: rgba(22, 126, 189, .2)
 }
-.b-banner__link.is--purple:hover:after {
+.b-bananer__link.is--purple:hover:after {
 	background-color: rgba(203, 50, 56, .2)
 }
-.b-banner__link.is--lime:hover:after {
+.b-bananer__link.is--lime:hover:after {
 	background-color: rgba(180, 208, 75, .2)
 }
-.b-banner__title {
+.b-bananer__title {
 	position: absolute;
 	bottom: 29px;
 	left: 0;
@@ -1758,7 +1758,7 @@ img {
 	color: #fff;
 	z-index: 3
 }
-.b-banner__title:after {
+.b-bananer__title:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -1768,39 +1768,39 @@ img {
 	border-top: 28px solid #167ebd;
 	border-right: 14px solid transparent
 }
-.b-banner__title.is--orange {
+.b-bananer__title.is--orange {
 	background-color: #ef9f2a
 }
-.b-banner__title.is--orange:after {
+.b-bananer__title.is--orange:after {
 	border-top: 28px solid #ef9f2a;
 	border-right: 14px solid transparent
 }
-.b-banner__title.is--green {
+.b-bananer__title.is--green {
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, .13);
 	background-color: #719d44
 }
-.b-banner__title.is--green:after {
+.b-bananer__title.is--green:after {
 	border-top: 28px solid #719d44;
 	border-right: 14px solid transparent
 }
-.b-banner__title.is--navy {
+.b-bananer__title.is--navy {
 	background-color: #167ebd
 }
-.b-banner__title.is--navy:after {
+.b-bananer__title.is--navy:after {
 	border-top: 28px solid #167ebd;
 	border-right: 14px solid transparent
 }
-.b-banner__title.is--purple {
+.b-bananer__title.is--purple {
 	background-color: #cb3238
 }
-.b-banner__title.is--purple:after {
+.b-bananer__title.is--purple:after {
 	border-top: 28px solid #cb3238;
 	border-right: 14px solid transparent
 }
-.b-banner__title.is--lime {
+.b-bananer__title.is--lime {
 	background-color: #b4d04b
 }
-.b-banner__title.is--lime:after {
+.b-bananer__title.is--lime:after {
 	border-top: 28px solid #b4d04b;
 	border-right: 14px solid transparent
 }
