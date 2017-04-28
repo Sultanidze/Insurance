@@ -329,32 +329,28 @@ $(function() {
     //---------------------------------------------------------------------------------------
 
 	// Модальне вікно колбека
-	
-	var	 $modalOvl = $(".b-overlay_modal")
+	var	 $modalOvl = $(".b-overlay_modal")	//темний фон
 		,$modals = $modalOvl.find(".b-modal")
-		,$modalCloseBtn = $modals.find(".b-modal__btn_close")
-		,$modalThanks = $modals.filter(".b-modal_thanks")
-		,$modalCallback = $modals.filter(".b-modal_callback")
+		,$modalCloseBtn = $modals.find(".b-modal__btn_close")	// close btns of all modals
+		,$modalThanks = $modals.filter(".b-modal_thanks")	// модальне вікно успішної відправки
+		,$modalCallback = $modals.filter(".b-modal_callback")	// модалка колбека
 		,$modalCallbackForm = $modalCallback.find(".js-form_callback")
 		;
-
-	$("#callbackBtn").click(function(event){
+	$("#callbackBtn").click(function(event){	// при кліку на кнопку колбека в меню
 		event.preventDefault();
-		$modalOvl.fadeIn();
-		$modalCallback.fadeIn();
+		$modalOvl.fadeIn();	// показуємо фон
+		$modalCallback.fadeIn();	// показуємо модалку з формою колбека
 	});
-
 	$modalCloseBtn.click(function(){	// hide modals
-		$modalOvl.fadeOut();
-		$modals.fadeOut();
+		$modalOvl.fadeOut();	// ховаємо фон
+		$modals.fadeOut();	// ховаємо всі модалки
 	});
-
-	$modalCallbackForm.submit(function(event){
+	$modalCallbackForm.submit(function(event){	//при відправці форми колбека
 		event.preventDefault();
 		// place for Ajax sending
 		// in a case of Ajax success:
-		$modals.fadeOut();
-		$modalThanks.fadeIn();
+		$modals.fadeOut();	// ховаємо всі модалки 
+		$modalThanks.fadeIn();	// показуємо модалку успішної відправки
 		// in a case of Ajax error:
 		//$modals.fadeOut();
 		//$modalError.fadeIn();

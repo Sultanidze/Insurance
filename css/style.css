@@ -2105,7 +2105,8 @@ img {
 	top: 100%;
 	left: 0;
 	width: 248px;
-	padding: 18px 16px 50px;
+/*	padding: 18px 16px 50px;*/
+	padding: 18px 16px 18px;
 	box-shadow: 0 0 10px 1px hsla(0, 0%, 56%, .2);
 	background-color: #f3f3f3
 }
@@ -3947,6 +3948,20 @@ button.b-formalize__btn_byTel{
     }
     .b-contacts__block{
         margin-bottom: 0;
+    }
+    .b-submenu__list{
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .b-submenu__item:hover{
+        background-color: transparent;
+    }
+    .b-submenu__item:hover .b-submenu__link{
+        color: #c63137;
     }
 }
 @media screen and (max-width:610px) {
