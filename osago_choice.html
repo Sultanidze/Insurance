@@ -150,7 +150,7 @@
             <h2 class="b-formalize__heading">Введите контактные данные:</h2>
             <form action="" class="b-form b-form_preBuy">
                 <label for="tel" class="sr-only">Введите Ваш номер телефона</label>
-                <input type="tel" id="tel" name="tel" placeholder="Введите Ваш номер телефона" required>
+                <input type="tel" id="tel" name="tel" placeholder="Введите Ваш номер телефона" required pattern="[0-9()\s+-]{15}">
                 <label for="name" class="sr-only">Введите Ваше имя</label>
                 <input type="text" name="name" id="name" placeholder="Введите Ваше имя" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}">
                 <div class="b-wrap_btnHalf">

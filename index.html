@@ -43,37 +43,42 @@
 					<a href="" class="b-lang__link">Ukr</a>
 				</div>
 			</div>
-
-
-
+			
 			<!-- navigation -->
 			<div class="b-nav">
 				<div class="b-mobile-nav__toggle js-nav-toggle"><i class="icon-nav"></i></div>
-<div class="b-mobile-nav">
-	<ul class="b-mobile-nav__list">
-		<li class="b-mobile-nav__item">
-			<a href="" class="b-mobile-nav__link">Главная</a>
-		</li>
-		<li class="b-mobile-nav__item">
-			<a href="" class="b-mobile-nav__link">Страхование</a>
-		</li>
-		<li class="b-mobile-nav__item">
-			<a href="" class="b-mobile-nav__link">Статьи</a>
-		</li>
-		<li class="b-mobile-nav__item">
-			<a href="" class="b-mobile-nav__link">Вопрос-Ответ</a>
-		</li>
-		<li class="b-mobile-nav__item">
-			<a href="" class="b-mobile-nav__link">Контакты</a>
-		</li>
-	</ul>
-</div>
+                <div class="b-mobile-nav">
+                    <ul class="b-mobile-nav__list">
+                        <li class="b-mobile-nav__item">
+                            <a href="" class="b-mobile-nav__link">Главная</a>
+                        </li>
+                        <li class="b-mobile-nav__item">
+                            <span href="" class="b-mobile-nav__link">Страхование</span>
+                        </li>
+                        <li class="b-mobile-nav__item">
+                            <a href="" class="b-mobile-nav__link">Статьи</a>
+                        </li>
+                        <li class="b-mobile-nav__item">
+                            <a href="" class="b-mobile-nav__link">Вопрос-Ответ</a>
+                        </li>
+                        <li class="b-mobile-nav__item">
+                            <a href="" class="b-mobile-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
 				<ul class="b-nav__list">
 					<li class="b-nav__item">
 						<a href="" class="b-nav__link">Главная</a>
 					</li>
 					<li class="b-nav__item">
-						<a href="" class="b-nav__link">Страхование</a>
+						<span class="b-nav__link">Страхование</span>
+						<ul class="b-submenu__list">
+						    <li class="b-submenu__item"><a href="#" class="b-submenu__link">Осаго</a></li>
+						    <li class="b-submenu__item"><a href="#" class="b-submenu__link">Зеленая карта</a></li>
+						    <li class="b-submenu__item"><a href="#" class="b-submenu__link">Каско</a></li>
+						    <li class="b-submenu__item"><a href="#" class="b-submenu__link">Туристическое страхование</a></li>
+						    <li class="b-submenu__item"><a href="#" class="b-submenu__link">Медицинское страхование</a></li>
+						</ul>
 					</li>
 					<li class="b-nav__item">
 						<a href="" class="b-nav__link">Статьи</a>
@@ -87,7 +92,7 @@
 				</ul>
 				<div class="b-callback">
 					<span class="b-callback__text">Хотите что бы мы вам перезвонили?</span>
-					<a href="" class="b-callback__link">Заказать обратный звонок!</a>
+					<button type="button" class="b-callback__link" id="callbackBtn">Заказать обратный звонок!</button>
 				</div>
 				<div class="b-phones b-phones--mobile">
 					<ul class="b-phones__list">
@@ -446,6 +451,33 @@
 	</footer>
 	<!-- /FOOTER -->
 
+    <!-- MODALS-->
+    <div class="b-overlay_modal">
+        <div class="b-modal b-modal_callback">
+            <div class="b-modal__btn_close">
+                <div class="b-bar_close b-bar_left"></div>
+                <div class="b-bar_close b-bar_right"></div>
+            </div>
+            <div class="b-modal__heading">Заказать звонок</div>
+            <form action="" class="b-form js-form_callback b-form_callback">
+                <label for="nameCB" class="sr-only">Введите Ваше имя</label>
+                <input type="text" name="nameCB" id="nameCB" placeholder="Ваше имя*" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}">
+                <label for="phoneCB" class="sr-only">Введите Ваш номер телефона</label>
+                <input type="tel" name="phoneCB" required pattern="[0-9()\s+-]{15}" placeholder="Номер телефона*">
+                <button type="submit" class="b-form__submit_feedback b-form__submit_vehicle">
+                    Отправить
+                </button>
+            </form>
+        </div>
+        <div class="b-modal b-modal_thanks">
+            <div class="b-modal__btn_close">
+                <div class="b-bar_close b-bar_left"></div>
+                <div class="b-bar_close b-bar_right"></div>
+            </div>
+            <div class="b-modal__heading">Спасибо!<br>Ваша заявка отправлена</div>
+        </div>
+    </div>
+    <!-- /MODALS-->
 
 	<script src="./js/script.js"></script>
 </body>

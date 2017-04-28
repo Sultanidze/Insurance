@@ -328,7 +328,39 @@ $(function() {
 		// });
     //---------------------------------------------------------------------------------------
 
-	$(".b-form input[type='tel']").mask("(999) 999-99-99");	// додаємо маску на номери телефонів у формах
+	// Модальне вікно колбека
+	
+	var	 $modalOvl = $(".b-overlay_modal")
+		,$modals = $modalOvl.find(".b-modal")
+		,$modalCloseBtn = $modals.find(".b-modal__btn_close")
+		,$modalThanks = $modals.filter(".b-modal_thanks")
+		,$modalCallback = $modals.filter(".b-modal_callback")
+		,$modalCallbackForm = $modalCallback.find(".js-form_callback")
+		;
+
+	$("#callbackBtn").click(function(event){
+		event.preventDefault();
+		$modalOvl.fadeIn();
+		$modalCallback.fadeIn();
+	});
+
+	$modalCloseBtn.click(function(){	// hide modals
+		$modalOvl.fadeOut();
+		$modals.fadeOut();
+	});
+
+	$modalCallbackForm.submit(function(event){
+		event.preventDefault();
+		// place for Ajax sending
+		// in a case of Ajax success:
+		$modals.fadeOut();
+		$modalThanks.fadeIn();
+		// in a case of Ajax error:
+		//$modals.fadeOut();
+		//$modalError.fadeIn();
+	})
+
+	$(".b-form input[type='tel']").mask("(099) 999-99-99");	// додаємо маску на номери телефонів у формах
 	// $(".b-form input[name='bDay']").mask(" 99/99/9999");	// додаємо маску на день народження
 	
 	// Запустимо наступні скрипти лише на сторінці із формою оформлення покупки
