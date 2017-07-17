@@ -379,10 +379,30 @@ $(function() {
 		  selectYears: true,
 		  selectMonths: true
 		}
+        
+        var pickadayOptionsBday = {
+		  selectYears: 100,
+		  selectMonths: true,
+            max: -5475,
+            onSet: function(){
+                $('.b-form_buy select').removeAttr("disabled").selectric("destroy");
+            }
+		}
+        
+        var pickadayOptionsFrom = {
+		  selectYears: 10,
+		  selectMonths: true,
+            min: new Date(),
+            onSet: function(){
+                $('.b-form_buy select').removeAttr("disabled").selectric("destroy");
+            }
+		}
 
-		$("#bDay, #issuedWhen").pickadate(pickadayOptions);
+		$("#bDay").pickadate(pickadayOptionsBday);
+		$("#issuedWhen").pickadate(pickadayOptions);
+//        $('.b-form_buy select').removeAttr("disabled").selectric("destroy");
 
-		var  $input_from = $('#legalFrom').pickadate(pickadayOptions)
+		var  $input_from = $('#legalFrom').pickadate(pickadayOptionsFrom)
 			,from_picker = $input_from.pickadate('picker')
 			;
 		var  $input_to = $('#legalTo').pickadate(pickadayOptions)
